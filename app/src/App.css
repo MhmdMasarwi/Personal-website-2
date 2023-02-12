@@ -1,0 +1,7 @@
+.app{
+    scroll-behavior: smooth;
+}
+
+ul{
+    list-style-type: none !important;  
+}

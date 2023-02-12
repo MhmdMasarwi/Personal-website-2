@@ -1,0 +1,41 @@
+.all {
+  margin-top: 10%;
+  width: 100%;
+}
+
+.FooterAll {
+  position: relative;
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  margin-right: 50%;
+  min-height: 20px;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+p {
+  width: 100%;
+  align-items: center;
+}
+
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  box-sizing: border-box;
+  margin-right: 0px;
+}
+
+.p2 {
+  color: rgb(0, 0, 0);
+  font-size: 1.1em;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  width: 100%;
+}

@@ -2,7 +2,7 @@ import { db } from "../firebase";
 import { doc, updateDoc } from "firebase/firestore";
 
 export const updateDocRef = async (docId, data) => {
-  const docRef = doc(db, "products", docId);
+  const docRef = doc(db, "items", docId);
 
   try {
     updateDoc(docRef, data).then((docRef) => {

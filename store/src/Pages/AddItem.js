@@ -34,9 +34,9 @@ function AddItem() {
       </div>
       <div className="textitem">
         <input
-          value={price}
+          value={category}
           onChange={(e) => {
-            setPrice(e.target.value);
+            setCategory(e.target.value);
           }}
           type="text"
           placeholder="category name"
@@ -44,9 +44,9 @@ function AddItem() {
       </div>
       <div className="textitem">
         <input
-          value={category}
+          value={price}
           onChange={(e) => {
-            setCategory(e.target.value);
+            setPrice(e.target.value);
           }}
           type="text"
           placeholder="item price"

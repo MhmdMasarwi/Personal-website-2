@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { getAllProductByCategory } from "../firebase_handlers/handleGetProduct";
+import { getAllProductByCategory } from "../firebase_functions/handleGetProduct";
 import Card from "./Card";
-import "./Category3.css";
 function Category3() {
   const [objData, setObjData] = useState([]);
   useEffect(() => {

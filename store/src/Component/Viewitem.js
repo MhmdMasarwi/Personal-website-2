@@ -1,10 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { handleDelete } from "../firebase_handlers/handleDeleteItem";
-import { getProduct } from "../firebase_handlers/handleGetProduct";
+import { handleDelete } from "../firebase_functions/handleDeleteItem";
 function Viewitem() {
   const location = useLocation();
   let navigate = useNavigate();
@@ -12,7 +11,6 @@ function Viewitem() {
   const [id, setId] = useState(location.state.id);
 
   return (
-    // <div>stam</div>
     <Card style={{ width: "18rem", height: "500px" }} className="card1">
       <Card.Img variant="top" src={data.imgUrl} />
       <Card.Body>
@@ -42,7 +40,6 @@ function Viewitem() {
         >
           update
         </Card.Link>
-        {/* <Card.Link href="#">Another Link</Card.Link> */}
       </Card.Body>
     </Card>
   );

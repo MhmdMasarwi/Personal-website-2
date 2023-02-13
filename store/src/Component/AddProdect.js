@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./AddProdect.css";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import { addProduct } from "../firebase_handlers/handlesubmit";
+import { addProduct } from "../firebase_functions/handlesubmit";
 
 const AddProdect = () => {
   const [productName, setProductName] = useState("");

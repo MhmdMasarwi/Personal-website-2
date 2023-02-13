@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { ButtonGroup, Button, Card, CardGroup } from "react-bootstrap";
-import { useRouteMatch, Link } from "react-router-dom";
+import React from "react";
+import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "./ProductPage.css";
 
 const SquareButton = ({ image, title }) => {

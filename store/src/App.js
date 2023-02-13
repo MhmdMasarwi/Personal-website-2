@@ -9,7 +9,6 @@ import Category2 from "./Component/Category2";
 import Category3 from "./Component/Category3";
 import ProductPage from "./Component/ProductPage";
 import Viewitem from "./Component/Viewitem";
-import EditP from "./Component/EditP";
 import UpdateProduct from "./Component/UpdateProduct";
 import SeeAllProduct from "./Component/SeeAllProduct";
 
@@ -36,14 +35,6 @@ function AddProductPage() {
     </div>
   );
 }
-
-function EditPage() {
-  return (
-    <div>
-      <EditP />
-    </div>
-  );
-}
 function UpdatePage() {
   return (
     <div>
@@ -58,13 +49,6 @@ function AddNewProductPage() {
       <Link to="/addProduct">
         <button>add new product</button>
       </Link>
-    </div>
-  );
-}
-function seeAllProducts() {
-  return (
-    <div>
-      <seeAllProducts />
     </div>
   );
 }

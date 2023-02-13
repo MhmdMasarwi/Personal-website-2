@@ -2,15 +2,22 @@ import "./App.css";
 // import ProductPage from "./Component/ProductPage";
 import { Routes, Route, Link } from "react-router-dom";
 import AddItem from "./Pages/AddItem";
-function HomePage() {
-  return <div>this is home page</div>;
+import HomePage from "./Pages/HomePage";
+import Categorys from "./Categorys.JS";
+function HomePag() {
+  return (
+    <div>
+      <HomePage />
+    </div>
+  );
 }
 function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<HomePag />} />
         <Route path="/additem" element={<AddItem />} />
+        <Route path="/categorys" element={<Categorys />} />
       </Routes>
     </div>
   );

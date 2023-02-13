@@ -1,19 +1,6 @@
 import React from "react";
-import { Container, Row, Col, Image, Button } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-
-const styles = {
-  imageContainer: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    height: "400px",
-  },
-  image: {
-    height: "100%",
-  },
-};
-
 const HomePage = () => {
   let navigate = useNavigate();
 

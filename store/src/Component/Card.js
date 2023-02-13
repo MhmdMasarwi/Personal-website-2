@@ -1,15 +1,12 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
-import { handleDelete } from "../firebase_handlers/handleDeleteItem";
+import { handleDelete } from "../firebase_functions/handleDeleteItem";
 import { useNavigate } from "react-router-dom";
 
 function CardPage({ data }) {
   let navigate = useNavigate();
 
-  useEffect(() => {
-    console.log(data.id);
-  }, []);
   return (
     <Card style={{ width: "18rem", height: "500px" }} className="card1">
       <Card.Img variant="top" src={data.data().imgUrl} />

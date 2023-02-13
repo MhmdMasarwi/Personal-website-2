@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getAllProduct } from "../firebase_handlers/handleGetProduct";
+import { getAllProduct } from "../firebase_functions/handleGetProduct";
 import Card from "./Card";
 function SeeAllProduct() {
   const [objData, setObjData] = useState([]);

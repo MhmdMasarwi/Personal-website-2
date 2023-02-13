@@ -3,8 +3,8 @@ import "./AddProdect.css";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useLocation } from "react-router-dom";
-import { getProduct } from "../firebase_handlers/handleGetProduct";
-import { updateDocRef } from "../firebase_handlers/handleUpdateItem";
+import { getProduct } from "../firebase_functions/handleGetProduct";
+import { updateDocRef } from "../firebase_functions/handleUpdateItem";
 function UpdateProduct() {
   const location = useLocation();
 
@@ -15,17 +15,15 @@ function UpdateProduct() {
   const [price, setPrice] = useState("");
 
   useEffect(() => {
-    console.log(location.state.id);
     const data = getProduct(null, { id: location.state.id });
     data.then((obj) => {
-      //   setObjData([...obj]);
       setCategoreyName(obj.data().category);
       setUrlImage(obj.data().imgUrl);
       setIsInventory(obj.data().inventory);
       setProductName(obj.data().name);
       setPrice(obj.data().price);
     });
-  }, []);
+  }, [location.state.id]);
   return (
     <div className="addproduct">
       <Form
@@ -39,12 +37,6 @@ function UpdateProduct() {
             inventory: inventory,
           };
           updateDocRef(location.state.id, data);
-          //   addProduct(e, data);
-          //   setPrice("");
-          //   setProductName("");
-          //   setUrlImage("");
-          //   setIsInventory("");
-          //   setCategoreyName("");
         }}
       >
         <Form.Group className="mb-3" controlId="formBasicEmail">

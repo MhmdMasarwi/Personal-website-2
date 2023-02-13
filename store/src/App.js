@@ -3,10 +3,12 @@ import { Routes, Route, Link } from "react-router-dom";
 import AddItem from "./Pages/AddItem";
 import HomePage from "./Pages/HomePage";
 import Category from "./Pages/Category";
+import ProductPage from "./Pages/ProductPage";
 function HomePag() {
   return (
     <div>
       <HomePage />
+      <ProductPage />
     </div>
   );
 }

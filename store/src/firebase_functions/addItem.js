@@ -1,10 +1,7 @@
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../firebase";
-// import { db } from "../../firebase";
 
-export const addProduct = async (e, data) => {
-  e.preventDefault();
-
+export const addItem = async (data) => {
   try {
     const docRef = await addDoc(collection(db, "products"), {
       name: data.name,

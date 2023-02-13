@@ -3,7 +3,7 @@ import { doc, deleteDoc } from "firebase/firestore";
 
 export const DeleteItem = (data) => {
   console.log(data);
-  const docRef = doc(db, "products", data.id);
+  const docRef = doc(db, "items", data.id);
 
   deleteDoc(docRef)
     .then(() => {

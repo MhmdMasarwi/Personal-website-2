@@ -1,0 +1,19 @@
+.button-container button {
+    display: block;
+    margin-bottom: 10px;
+  }
+.Button {
+  width: 200px;
+  height: 200px;
+  margin-right: 150px;
+}
+.ButtonB {
+  width: 200px;
+  height: 200px;
+  margin-right: 300px;
+}
+.ButtonC {
+  width: 200px;
+  height: 200px;
+  margin-right: 40px;
+}

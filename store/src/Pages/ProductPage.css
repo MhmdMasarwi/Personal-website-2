@@ -24,3 +24,21 @@
   background-color: lightcoral !important;
   border: 1px solid lightcoral !important;
 }
+.action__items {
+  display: flex;
+  width: 400px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.actionButton {
+  width: fit-content;
+  margin-left: 40px;
+  outline: none;
+  padding: 10px;
+  background-color: lightcoral;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 150ms ease-in-out;
+}

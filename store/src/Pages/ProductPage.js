@@ -40,7 +40,7 @@ const ImageSquareButtons = () => {
         <Link to="/additem">
           <button className="actionButton">add product</button>
         </Link>
-        <Link to="/additem">
+        <Link to="/getall">
           <button className="actionButton">get all products</button>
         </Link>
       </div>

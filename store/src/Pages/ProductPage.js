@@ -36,9 +36,14 @@ const ImageSquareButtons = () => {
           category 3
         </Button>
       </Link>
-      <Link to="/additem">
-        <button>add product</button>
-      </Link>
+      <div className="action__items">
+        <Link to="/additem">
+          <button className="actionButton">add product</button>
+        </Link>
+        <Link to="/additem">
+          <button className="actionButton">get all products</button>
+        </Link>
+      </div>
     </div>
   );
 };

@@ -4,6 +4,7 @@ import AddItem from "./Pages/AddItem";
 import HomePage from "./Pages/HomePage";
 import Category from "./Pages/Category";
 import ProductPage from "./Pages/ProductPage";
+import UpdateItem from "./Pages/UpdateItem";
 function HomePag() {
   return (
     <div>
@@ -19,6 +20,7 @@ function App() {
         <Route path="/" element={<HomePag />} />
         <Route path="/additem" element={<AddItem />} />
         <Route path="/category/:type" element={<Category />} />
+        <Route path="/updateitem" element={<UpdateItem />} />
       </Routes>
     </div>
   );

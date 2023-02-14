@@ -7,7 +7,7 @@ export const updateDocRef = async (docId, data) => {
   try {
     updateDoc(docRef, data).then((docRef) => {
       console.log(
-        "A New Document Field has been added to an existing document"
+        "A New Document Field has been updated to an existing document"
       );
     });
     return true;

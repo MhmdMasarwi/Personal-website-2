@@ -1,17 +1,20 @@
-import React, { useState } from "react";
-import { addItem } from "../firebase_functions/addItem";
+import React, { useState, useEffect } from "react";
+import { updateDocRef } from "../firebase_functions/handleUpdateItem";
+import { useLocation } from "react-router-dom";
 import "./Additem.css";
-function AddItem() {
-  const [name, setName] = useState("");
-  const [url, setUrl] = useState("");
-  const [price, setPrice] = useState("");
-  const [category, setCategory] = useState("");
-  const [isIn, setIsIn] = useState("");
-  const [success, setSuccess] = useState(0);
-
+function UpdateItem() {
+  let location = useLocation();
+  const [name, setName] = useState(location.state.data.name);
+  const [url, setUrl] = useState(location.state.data.imgUrl);
+  const [price, setPrice] = useState(location.state.data.price);
+  const [category, setCategory] = useState(location.state.data.category);
+  const [isIn, setIsIn] = useState(location.state.data.inventory);
+  useEffect(() => {
+    console.log(location.state);
+  });
   return (
     <div className="additem__container">
-      <h1>add new item page</h1>
+      <h1>Update new item page</h1>
       <div className="textitem">
         <input
           value={name}
@@ -70,43 +73,25 @@ function AddItem() {
             : "add_new_item"
         }
         onClick={() => {
-          try {
-            const data = {
-              name: name,
-              imgUrl: url,
-              category: category,
-              price: price,
-              inventory: isIn,
-            };
-            addItem(data);
-            setPrice("");
-            setName("");
-            setUrl("");
-            setIsIn("");
-            setCategory("");
-            setSuccess(1);
-          } catch (e) {
-            setSuccess(-1);
-          }
+          const data = {
+            name: name,
+            imgUrl: url,
+            category: category,
+            price: price,
+            inventory: isIn,
+          };
+          updateDocRef(location.state.id, data);
+          setPrice("");
+          setName("");
+          setUrl("");
+          setIsIn("");
+          setCategory("");
         }}
       >
-        add new item
+        Update item
       </button>
-      <div
-        className={`add_new_item_status ${
-          success === 1 ? "success" : success === -1 ? "failed" : ""
-        }`}
-      >
-        <h6>
-          {success === 1
-            ? "Add new item success"
-            : success === -1
-            ? "Add new item failed"
-            : "Add new item status"}
-        </h6>
-      </div>
     </div>
   );
 }
 
-export default AddItem;
+export default UpdateItem;

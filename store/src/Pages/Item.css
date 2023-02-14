@@ -16,3 +16,6 @@
   border: 1px solid lightcoral;
   cursor: pointer;
 }
+.item__container > img {
+  width: 100px;
+}

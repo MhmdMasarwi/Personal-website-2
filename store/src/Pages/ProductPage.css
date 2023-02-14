@@ -1,19 +1,26 @@
 .button-container button {
-    display: block;
-    margin-bottom: 10px;
-  }
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
 .Button {
   width: 200px;
   height: 200px;
   margin-right: 150px;
+  background-color: lightcoral !important;
+  border: 1px solid lightcoral !important;
 }
 .ButtonB {
   width: 200px;
   height: 200px;
   margin-right: 300px;
+  background-color: lightcoral !important;
+  border: 1px solid lightcoral !important;
 }
 .ButtonC {
   width: 200px;
   height: 200px;
   margin-right: 40px;
+  background-color: lightcoral !important;
+  border: 1px solid lightcoral !important;
 }

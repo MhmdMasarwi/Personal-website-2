@@ -5,6 +5,7 @@ import HomePage from "./Pages/HomePage";
 import Category from "./Pages/Category";
 import ProductPage from "./Pages/ProductPage";
 import UpdateItem from "./Pages/UpdateItem";
+import AllProducts from "./Pages/AllProducts";
 function HomePag() {
   return (
     <div>
@@ -21,6 +22,7 @@ function App() {
         <Route path="/additem" element={<AddItem />} />
         <Route path="/category/:type" element={<Category />} />
         <Route path="/updateitem" element={<UpdateItem />} />
+        <Route path="/getall" element={<AllProducts />} />
       </Routes>
       <footer>welcom to our store</footer>
     </div>

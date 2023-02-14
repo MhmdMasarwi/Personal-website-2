@@ -15,4 +15,12 @@ export const getByCategory = async (data) => {
   });
 };
 
-export const getAllProduct = async () => {};
+export const getAllProduct = async () => {
+  try {
+    return getDocs(collection(db, "items")).then((querySnapshot) => {
+      return querySnapshot.docs;
+    });
+  } catch (e) {
+    console.error("Error adding document: ", e);
+  }
+};

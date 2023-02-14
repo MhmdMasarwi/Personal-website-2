@@ -22,6 +22,7 @@ function App() {
         <Route path="/category/:type" element={<Category />} />
         <Route path="/updateitem" element={<UpdateItem />} />
       </Routes>
+      <footer>welcom to our store</footer>
     </div>
   );
 }
